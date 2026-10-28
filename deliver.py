@@ -12,6 +12,9 @@
 为什么不把检查写在本文件里：检查标准如果和实现由同一处维护，
 很容易变成「自己批改自己的作业」。验收标准由 review_gate.py 和
 final_check.py 定义，这里只负责按顺序调用并汇总结果。
+
+用法：
+    cd recon-report && python deliver.py
 """
 
 from __future__ import annotations
