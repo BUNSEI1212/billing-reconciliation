@@ -73,6 +73,8 @@ Excel 1 枚（`out/演示用_突合レポート_2026-10.xlsx`、PNG プレビュ
 
 **任意列を省略した場合：** `サービス日` がないと日付系の検査（対象期間外・契約開始前）が無効になります。`適用開始日` がないと分段が使えず、同一品目に複数行があるとエラーになります。
 
+**列名は日本語のまま変更しないでください。** コードは `利用者名` / `品目` / `数量` / `単価` / `金額` / `サービス日` / `契約単価` / `適用開始日` を文字列で完全一致させています。英語等に置き換えると読み込みに失敗します。
+
 ### 差異の 8 種別
 
 | # | 種別 | 位置精度 | 状態 |
@@ -249,6 +251,10 @@ Reconciliation means comparing two things against each other.
 before contract start) are disabled. Without `適用開始日`, segmentation is unavailable and
 multiple rows for the same item will raise an error.
 
+**Do not translate the column names.** The code matches them literally as Japanese
+strings: `利用者名` / `品目` / `数量` / `単価` / `金額` / `サービス日` / `契約単価` /
+`適用開始日`. Replacing them with English headers will break loading.
+
 ### The eight discrepancy types
 
 | # | Type | Location precision | Status |
@@ -411,6 +417,8 @@ where it is convenient.**
 对账的本质是拿两样东西相互比对。**只有一样，就没有对账。**
 
 **省略可选列的后果：** 不写 `サービス日`，日期类检查（不在期间内、早于合同生效）失效；不写 `適用開始日`，分段不可用，同一品目出现多行会直接报错。
+
+**列名请保持日文原样，不要翻译。** 代码是拿这些字符串做完全匹配的：`利用者名` / `品目` / `数量` / `単価` / `金額` / `サービス日` / `契約単価` / `適用開始日`。换成英文表头会直接加载失败。
 
 ### 八类差异
 
