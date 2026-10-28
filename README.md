@@ -1,4 +1,4 @@
-# ledger-recon — 突合レポート / Reconciliation Diff Report
+# billing-reconciliation — 突合レポート / Reconciliation Diff Report
 
 **日本の中小事業者（介護請求業務）向け 月次突合レポートツール**
 **Monthly reconciliation diff report for Japanese SME billing (long-term care / kaigo billing)**
